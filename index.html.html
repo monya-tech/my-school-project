@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>加拿大 ~ Canada</title>
+  <style>
+    /* 🌿 Background with maple leaves */
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      background-image: url('mapleleaf.jpg');
+      background-size: cover;
+      color: #4e342e;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Soft white overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      z-index: -1;
+    }
+
+    /* 🇨🇦 Header with Canada flag */
+    header {
+      background-image: url('canada flag.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 40px;
+      text-shadow: 2px 2px 4px #000000;
+      text-align: center;
+      animation: fadeIn 2s;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    h1 {
+      font-size: 40px;
+      animation: colorChange 5s infinite alternate;
+    }
+
+    @keyframes colorChange {
+      0% {color: #fff;}
+      50% {color: #ffeb3b;}
+      100% {color: #00bcd4;}
+    }
+
+    section {
+      background-color: rgba(255, 248, 225, 0.9);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 30px auto;
+      width: 80%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: left;
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+    }
+
+    section:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: rgba(255, 236, 179, 0.9);
+    }
+
+    section img {
+      border-radius: 15px;
+      width: 45%;
+      height: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    section div {
+      width: 50%;
+      padding: 10px;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #66bb6a;
+    }
+
+    footer {
+      background-color: #1565c0;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    #fact {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #d84315;
+      text-align: center;
+    }
+
+    /* 🍁 Maple leaf animation */
+    .leaves {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .leaf {
+      position: absolute;
+      top: -100px;
+      width: 60px;
+      height: 60px;
+      opacity: 0.8;
+      animation: fall 8s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {transform: translateY(-100px) rotate(0deg); opacity: 1;}
+      100% {transform: translateY(100vh) rotate(360deg); opacity: 0;}
+    }
+
+    /* each leaf has a different delay */
+    .leaf:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .leaf:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .leaf:nth-child(3) { left: 50%; animation-delay: 4s; }
+    .leaf:nth-child(4) { left: 70%; animation-delay: 6s; }
+    .leaf:nth-child(5) { left: 90%; animation-delay: 1s; }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🍁 Floating leaves -->
+  <div class="leaves">
+    <img src="mapleleaf fading2.png" class="leaf">
+    <img src="mapleleaf fading2.png" class="leaf">
+    <img src="mapleleaf fading2.png" class="leaf">
+    <img src="mapleleaf fading2.png" class="leaf">
+    <img src="mapleleaf fading2.png" class="leaf">
+  </div>
+
+  <header>
+    <h1>欢迎来到加拿大 ~ Welcome to Canada</h1>
+    <p>枫叶之国 · 多元文化的家园</p>
+  </header>
+
+  <!-- 1️⃣ Location -->
+  <section>
+    <img src="canada map.jpg" alt="Canada Map">
+    <div>
+      <h2>📍 地理位置 </h2>
+      <p>加拿大位于北美洲，面积约998万平方公里，是世界第二大国家。</p>
+      <p>其北临北冰洋，南接美国，西临太平洋，东濒大西洋。加拿大自然风光壮丽，从落基山脉到尼亚加拉瀑布，景色多样。</p>
+	  <button onclick="window.open('https://zh.wikipedia.org/wiki/%E5%8A%A0%E6%8B%BF%E5%A4%A7')">了解更多</button>
+    </div>
+  </section>
+
+  <section>
+    <img src="historybackground.jpg" height = "150" alt="historybackground">
+    <div>
+      <h2>📍 历史背景 </h2>
+      <p>加拿大的历史可以追溯到原住民文明，欧洲人于16世纪开始探索。1867年，加拿大成为英联邦的自治领，逐渐发展为今天的独立国家。加拿大的多元文化源于移民与原住民的长期融合。</p>
+    </div>
+  </section>
+  
+  <!-- 5️⃣ Maple Symbol -->
+  <section>
+    <img src="mapleleaf2.jpg" alt="Maple Leaves">
+    <div>
+      <h2>🍁 加拿大的象征</h2>
+      <p>枫叶是加拿大的象征，象征着和平与友善。秋天时，红色和金色的枫叶点亮整个国家的景色。</p>
+    </div>
+  </section>
+  
+ <!-- 4️⃣ Culture -->
+  <section>
+    <img src="culture.jpg" alt="Montreal Culture">
+    <div>
+      <h2>🎭 文化特色 </h2>
+      <p>加拿大是一个多元文化的国家，来自世界各地的人共同生活。这里融合了原住民、法国、英国和亚洲文化，音乐、艺术和美食都非常丰富。</p>
+    </div>
+  </section>
+
+ <!-- 2️⃣ Famous Places -->
+  <section>
+  <img src="nirvana.jpg" alt="Nirvana">
+    <div>
+    <h2>🏞  著名景点</h2>
+    <p>加拿大拥有丰富的自然与城市景观：</p>
+    <ul>
+      <li>尼亚加拉瀑布（Niagara Falls）</li>
+      <li>班夫国家公园（Banff National Park）</li>
+      <li>魁北克古城（Old Quebec）</li>
+      <li>多伦多 CN 塔（CN Tower）</li>
+    </ul>
+  </section>
+
+  
+
+  <footer>
+    <p>16 Project 制作网页 | I love Canada | © 2025</p>
+  </footer>
+
+  <script>
+    function showFact() {
+      const facts = [
+        "加拿大的国旗上有一片红色的枫叶，共有11个尖角。",
+        "加拿大的国土面积是998万平方公里。",
+        "加拿大人非常喜欢冰球，这是一项国家运动。",
+        "加拿大的冬天非常寒冷，有的地方会低到零下40度！",
+        "“Canada” 这个名字来自印第安语“Kanata”，意思是“村庄”。"
+      ];
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById("fact").textContent = randomFact;
+    }
+  </script>
+
+</body>
+</html>
